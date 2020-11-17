@@ -54,13 +54,15 @@ transaccionFiltro.addEventListener("change", (e) => {
   const anunciosEncontrados = anunciosGuardados.filter((anuncio) => {
     return( anuncio.transaccion.toLowerCase().includes(stringDeBusqueda));
   });
-  if (stringDeBusqueda != 'permuta') {
+  if (stringDeBusqueda == 'venta' || stringDeBusqueda == 'alquiler') {
     let promedio = anunciosEncontrados
       .map((anuncio) => parseFloat(anuncio.precio)) 
       .reduce((previo, actual) => previo + actual) / anunciosEncontrados.length;
 
   //console.log(promedio);
   txtPromedio.value = promedio;
+  }else{
+    txtPromedio.value = "";
   }
   
   crearTabla(anunciosEncontrados);
