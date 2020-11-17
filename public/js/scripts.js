@@ -70,6 +70,8 @@ transaccionFiltro.addEventListener("change", (e) => {
 
 
 
+
+
 busqueda.addEventListener("keyup", (e) => {
   // console.log(e.target.value);
   const stringDeBusqueda = e.target.value.toLowerCase();
