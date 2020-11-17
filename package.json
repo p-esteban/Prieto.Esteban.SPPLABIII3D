@@ -1,0 +1,26 @@
+{
+  "name": "prieto.pplabiii3d",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/p-esteban/Prieto.PPLABIII3D.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/p-esteban/Prieto.PPLABIII3D/issues"
+  },
+  "homepage": "https://github.com/p-esteban/Prieto.PPLABIII3D#readme",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.1",
+    "axios": "^0.21.0",
+    "bootstrap": "^4.5.3",
+    "jquery": "^3.5.1",
+    "p": "^0.2.0"
+  }
+}

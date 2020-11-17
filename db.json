@@ -1,0 +1,54 @@
+{
+  "anuncios": [
+    {
+      "id": 1,
+      "titulo": "Volvo",
+      "descripcion": "XC60",
+      "transaccion": "permuta",
+      "precio": 59,
+      "num_puertas": 3,
+      "num_kms": 846,
+      "potencia": 686
+    },
+    {
+      "id": 2,
+      "titulo": "Nissan",
+      "descripcion": "Datsun / Nissan Z-car",
+      "transaccion": "alquiler",
+      "precio": 20,
+      "num_puertas": 3,
+      "num_kms": 412,
+      "potencia": 903
+    },
+    {
+      "id": 3,
+      "titulo": "Toyota",
+      "descripcion": "Tundra",
+      "transaccion": "permuta",
+      "precio": 50,
+      "num_puertas": 5,
+      "num_kms": 985,
+      "potencia": 211
+    },
+    {
+      "id": 4,
+      "titulo": "Ford",
+      "descripcion": "Borde",
+      "transaccion": "alquiler",
+      "precio": 44,
+      "num_puertas": 2,
+      "num_kms": 457,
+      "potencia": 267
+    },
+    {
+      "id": 5,
+      "titulo": "Mercedes-Benz",
+      "descripcion": "Clase S",
+      "transaccion": "venta",
+      "precio": 29,
+      "num_puertas": 3,
+      "num_kms": 494,
+      "potencia": 825
+    }
+  ]
+}

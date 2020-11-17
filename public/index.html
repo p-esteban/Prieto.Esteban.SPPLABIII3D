@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@600&family=Krona+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css"
+    />
+    <link
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./image/logoceleste.png"
+    />
+    <!-- No olvidarme del type="module" -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./js/scripts.js" type="module"></script>
+    <title>Baus Automotores</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col">
+          <div
+            class="header bg-primary d-flex flex-row align-items-center justify-content-around"
+          >
+            <i class="fas fa-car fa-3x p-3 text-white"></i>
+
+            <div class="nav">
+              <a href="#">Nosotros</a>
+              <a href="#">Anuncios</a>
+              <a href="#">Blog</a>
+              <a href="#">Contacto</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="row justify-content-center">
+          <div class="row justify-content-center">
+            <div class="col-md-auto">
+              <p id="tituloPagina" class="text-white bg-primary mt-5 p-3">
+                ADMINISTRACION
+              </p>
+              <img
+                class="img-fluid"
+                id="imgAuto"
+                src="./image/pngegg2.png"
+                alt="imagen de autos"
+              />
+            </div>
+          </div>
+
+          <div
+            class="row col-12 d-flex flex-column justify-content-center align-content-center"
+          >
+            <br />
+            <h3 id="tituloFormulario" class="text-center">
+              Llena el formulario de Alta
+            </h3>
+           
+            <fieldset class="fieldset-container border p-2 text-center">
+              <legend class="">Datos del vehiculo</legend>
+              <form id="formAnuncio" action="#">
+                <div class="row">
+                  <div class="col">
+                    <div class="form-group">
+                      <label>Titulo</label>
+                      <input
+                        class="form-control"
+                        type="text"
+                        id="txtTitulo"
+                        placeholder="Titulo"
+                        autocomplete="off"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <div class="form-group">
+                      <select class="form-control" id="cmbTransaccion">
+                        <option value="-">---- Elegir Transaccion ----</option>
+                        <option value="venta">venta</option>
+                        <option value="alquiler">alquiler</option>
+                        <option value="permuta">permuta</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <div class="form-group">
+                      <label>Descripcion</label>
+                      <input
+                        class="form-control"
+                        type="text"
+                        id="txtDescripcion"
+                        placeholder="Descripcion"
+                        autocomplete="off"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col">
+                    <div class="form-group">
+                      <label>Precio</label>
+                      <input
+                        class="form-control"
+                        type="text"
+                        min="1"
+                        id="txtPrecio"
+                        placeholder="Precio"
+                        autocomplete="off"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row" id="containerVarios">
+                  <div class="col-sm-4">
+                    <div class="form-group">
+                      <img
+                        src="./image/puerta.png"
+                        alt="door icon"
+                        class="iconoInput mb-2"
+                      />
+                      <input
+                        class="form-control"
+                        type="number"
+                        min="1"
+                        id="txtCantPuertas"
+                        placeholder="Puertas"
+                        autocomplete="off"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="form-group">
+                      <img
+                        src="./image/velocimetro.png"
+                        alt="kms icon"
+                        class="iconoInput mb-2"
+                      />
+                      <input
+                        class="form-control"
+                        type="number"
+                        min="1"
+                        id="txtCantKms"
+                        placeholder="KMs"
+                        autocomplete="off"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="form-group">
+                      <img
+                        src="./image/motor.png"
+                        alt="motor icon"
+                        class="iconoInput mb-2"
+                      />
+                      <input
+                        class="form-control"
+                        type="number"
+                        min="1"
+                        id="txtPotencia"
+                        placeholder="Potencia"
+                        autocomplete="off"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="row my-4">
+                  <div class="col">
+                    <div
+                      class="btn-group d-flex flex-wrap justify-content-around"
+                      role="group"
+                    >
+                      <button class="botones bg-success" id="btnGuardar">
+                        <i class="fas fa-save"></i>
+
+                        Guardar
+                      </button>
+                      <button class="botones bg-warning" id="btnModificar">
+                        <i class="fas fa-edit"></i>
+
+                        Modificar
+                      </button>
+                      <button class="botones bg-danger" id="btnEliminar">
+                        <i class="fas fa-trash-alt"></i>
+
+                        Eliminar
+                      </button>
+                      <button class="botones bg-primary" id="btnCancelar">
+                        <i class="fas fa-undo-alt"></i>
+
+                        Cancelar
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </fieldset>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col">
+          <div
+            class="checkboxContainer py-3 border d-flex justify-content-around flex-wrap"
+          >
+            <div class="font-weight-bolder text-white bg-primary px-2">
+              Mostrar columnas
+            </div>
+
+            <div class="custom-control custom-checkbox custom-control-inline">
+              <input
+                type="checkbox"
+                class="custom-control-input"
+                id="titulo"
+                checked
+              />
+              <label class="custom-control-label" for="titulo">Titulo</label>
+            </div>
+            <div class="custom-control custom-checkbox custom-control-inline">
+              <input
+                type="checkbox"
+                class="custom-control-input"
+                id="descripcion"
+                checked
+              />
+              <label class="custom-control-label" for="descripcion"
+                >Descripcion</label
+              >
+            </div>
+            <div class="custom-control custom-checkbox custom-control-inline">
+              <input
+                type="checkbox"
+                class="custom-control-input"
+                id="transaccion"
+                checked
+              />
+              <label class="custom-control-label" for="transaccion"
+                >Transaccion</label
+              >
+            </div>
+
+            <div class="custom-control custom-checkbox custom-control-inline">
+              <input
+                type="checkbox"
+                class="custom-control-input"
+                id="precio"
+                checked
+              />
+              <label class="custom-control-label" for="precio">Precio</label>
+            </div>
+
+            <div class="custom-control custom-checkbox custom-control-inline">
+              <input
+                type="checkbox"
+                class="custom-control-input"
+                id="num_puertas"
+                checked
+              />
+              <label class="custom-control-label" for="num_puertas"
+                >Cant_Puertas</label
+              >
+            </div>
+
+            <div class="custom-control custom-checkbox custom-control-inline">
+              <input
+                type="checkbox"
+                class="custom-control-input"
+                id="num_kms"
+                checked
+              />
+              <label class="custom-control-label" for="num_kms">KMs</label>
+            </div>
+
+            <div class="custom-control custom-checkbox custom-control-inline">
+              <input
+                type="checkbox"
+                class="custom-control-input"
+                id="potencia"
+                checked
+              />
+              <label class="custom-control-label" for="potencia"
+                >Potencia</label
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-4 d-flex flex-row flex-wrap justify-content-center">
+        <div class="col d-flex justify-content-center align-content-center">
+          <form class="form-inline">
+            <i class="fas fa-search" aria-hidden="true"></i>
+            <input
+              id="buscarAnuncio"
+              autocomplete="off"
+              class="form-control form-control-sm ml-3 w-75"
+              type="text"
+              placeholder="Buscar"
+            />
+          </form>
+        </div>
+        <div class="col">
+          <div class="align-content-end">
+            <label for="cmbTransaccionFiltro">Buscar Transaccion</label>
+
+            <select class="form-control" id="cmbTransaccionFiltro">
+              <option value="">N/A</option>
+              <option value="venta">venta</option>
+              <option value="alquiler">alquiler</option>
+              <option value="permuta">permuta</option>
+            </select>
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-group">
+            <label>Promedio</label>
+            <input
+              class="form-control"
+              type="number"
+              id="txtPromedio"
+              placeholder="Promedio"
+              readonly
+            />
+          </div>
+        </div>
+       
+      </div>
+      <br />
+      <div class="row justify-content-center">
+        <div class="col-md-auto">
+          <div id="divSpinner"></div>
+
+          <div id="divTabla"></div>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="container-fluid">
+          <div
+            id="footer"
+            class="col-12 footer bg-primary d-flex d-inline-flex flex-row align-items-center justify-content-around mt-5"
+          >
+            <div class="p text-white align-self-center">
+              Todos los derechos reservados 2020 &copy;
+            </div>
+            <div class="nav">
+              <a href="#">Nosotros</a>
+              <a href="#">Anuncios</a>
+              <a href="#">Blog</a>
+              <a href="#">Contacto</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
